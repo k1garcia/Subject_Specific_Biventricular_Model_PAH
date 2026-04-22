@@ -117,4 +117,5 @@ paste into excel and the third column is what we need
 We will make one for RV, LV, Septum 
 ctrl+A selects all data 
 
+The "compare_3_hearts.." code is post-processing code. Please check out my dissertation for more detailed descriptions. 
 
