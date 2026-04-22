@@ -84,9 +84,9 @@ Two new files (a .h5 and .xdmf) named *rat name*_With_Fibers will be created in 
 Copy these two files (.h5 and .xdmf) to the Volume_Meshes folder in github
 
 Zero Load State + Passive Filling (Shaikh’s code that uses Gibbon)
-Open the matlab script "Trial4_UseXDMF_Volume.m" in the ZeroLoadState_InverseFEA folder
+Open the matlab script "FEA_Inverse_Foward..." in the ZeroLoadState_InverseFEA folder
 Change the ratname variable (should match the volume mesh)
-Change the materialScale variable to 50 (will be changed later)
+The materialScale variable can be changed if needed
 Change the material parameter. This includes the a, b, a0....k parameters.
 Change the Pressure_LVRV parameter as [LV RV]
 The material parameters and pressures can be found in the cMR_Tracer.xlsx file
@@ -94,4 +94,27 @@ Run the Matlab script
 The final Febio files will be stored in a new folder with the rat name (automatically created) in the ZeroLoadState_InverseFEA/FeBio folder
 You can use the Febio files to extract additional parameters
 
-END
+To make sure the FEBio Studio material property is set up correctly: 
+
+1. Windows (C:) → program files → FEBioStudio → bin → 
+
+Separating myocardium!!:
+
+1. Input xdmf to paraview (reader T)
+2. Open and then click apply 
+3. click f and select cells through and highlight area 
+4. can grow and shrink selection 
+5. click on f and shift and select andc we can remove parts 
+6. filters → extract selection 
+7. copy active selection 
+8. hit apply 
+9. Edit → find data (v) and invert selection to save lv and rv walls
+10. Use freeze to extract Cell IDs
+
+filters → extract selection and copy active selection 
+paste in notebad and get rid of top header 
+paste into excel and the third column is what we need 
+We will make one for RV, LV, Septum 
+ctrl+A selects all data 
+
+
